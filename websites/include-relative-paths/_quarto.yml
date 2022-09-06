@@ -15,5 +15,6 @@ format:
     css: styles.css
     toc: true
 
+quarto-required-version: ">=1.2.67"
 
 
