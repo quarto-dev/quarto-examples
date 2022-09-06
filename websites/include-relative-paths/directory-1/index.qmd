@@ -1,0 +1,5 @@
+The outer `include` statement we use is actually an absolute include, but that `include` then
+uses a relative sub-include. The unintuitive (but sometimes useful) behavior is that the path
+of the subinclude resolves relative to _this_ file.
+
+{{< include /_includes/callout.md >}}

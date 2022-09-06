@@ -1,0 +1,14 @@
+---
+title: "Quarto Example: Relative Paths in Includes"
+---
+
+[Include shortcodes](https://quarto.org/docs/authoring/includes.html) are powerful but can be unintuitive, especially when it
+comes to paths.
+
+This example shows the behavior of relative paths in includes, and how you can make use of them.
+
+We illustrate the behavior with files in two different subdirectories:
+
+- [directory 1](directory-1/index.qmd)
+- [directory 2](directory-2/index.qmd)
+
