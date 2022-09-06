@@ -5,4 +5,6 @@ title: "Quarto Example: Absolute Paths in Includes"
 [Include shortcodes](https://quarto.org/docs/authoring/includes.html) are powerful but can be unintuitive, especially when it
 comes to paths.
 
+This example shows the behavior of absolute paths in includes, and how you can make use of them.
+
 {{< include /_includes/snippet.md >}}
