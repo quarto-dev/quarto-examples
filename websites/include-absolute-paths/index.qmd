@@ -1,0 +1,8 @@
+---
+title: "Quarto Example: Absolute Paths in Includes"
+---
+
+[Include shortcodes](https://quarto.org/docs/authoring/includes.html) are powerful but can be unintuitive, especially when it
+comes to paths.
+
+{{< include /_includes/snippet.md >}}
