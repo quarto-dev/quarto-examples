@@ -4,24 +4,22 @@ format: revealjs
 
 ## Slide 1
 
-A slide.
-
-## Slide 2
-
-Another slide.
+If you need a selector to apply only to this slide,
+use the slide id:
 
 1. Without margin
 2. Without margin
 
-## Slide 3
+## Slide 2
 
-A third slide.
+The selector below will only apply to slide 1, not
+to this slide:
 
 1. With margin
 2. With margin
 
 <style>
-#slide-2 ol li  {
+#slide-1 ol li  {
      margin-top:0;
 }
 </style>
