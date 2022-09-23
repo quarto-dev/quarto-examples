@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 08d80f0a-fa2d-4ce0-8905-f26518d5daa2
+      url: 'https://quartopub.com/sites/examples/include-relative-paths'

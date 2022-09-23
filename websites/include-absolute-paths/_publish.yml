@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c492d177-8b21-49e9-bbc3-e1d06c89479e
+      url: 'https://quartopub.com/sites/examples/include-absolute-paths'

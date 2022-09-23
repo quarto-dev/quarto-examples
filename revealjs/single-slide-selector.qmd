@@ -1,4 +1,5 @@
 ---
+title: Apply CSS rules based on slide selector
 format: revealjs
 ---
 
@@ -10,16 +11,54 @@ use the slide id:
 1. Without margin
 2. Without margin
 
+## CSS used
+
+This is the CSS used for previous slide
+
+```css
+#slide-1 ol li  {
+     margin-top:0;
+}
+```
+
 ## Slide 2
 
-The selector below will only apply to slide 1, not
+The selector will only apply to slide 1, not
 to this slide:
 
 1. With margin
 2. With margin
 
+## Slide 3 {#special-slide}
+
+You add specific id using 
+
+```markdown
+## Slide 3 {#special-slide}
+```
+1. With bigger margin
+2. With bigger margin
+
+## CSS
+
+This is the CSS used for previous slide
+
+```css
+#special-slide ol li  {
+     margin-top: 2em;
+}
+```
+
+## {.center}
+
+See [code source](https://github.com/quarto-dev/quarto-examples/blob/main/revealjs/single-slide-selector.qmd) for details
+
 <style>
 #slide-1 ol li  {
      margin-top:0;
+}
+
+#special-slide ol li  {
+     margin-top: 2em;
 }
 </style>

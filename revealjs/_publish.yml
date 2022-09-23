@@ -1,0 +1,4 @@
+- source: single-slide-selector.qmd
+  quarto-pub:
+    - id: 0433fcd4-2810-426d-bd9c-d4d28b4f89c2
+      url: 'https://quartopub.com/sites/examples/revealjs-css-slide-id'

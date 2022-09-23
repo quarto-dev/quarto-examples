@@ -8,11 +8,15 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+  repo-url: https://github.com/quarto-dev/quarto-examples
+  repo-subdir: websites/include-absolute-paths
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    code-tools:
+      source: repo
 
 quarto-required-version: ">=1.2.67"
