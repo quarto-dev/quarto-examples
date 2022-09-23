@@ -1,7 +1,8 @@
 
 <div>
 
-See live at https://cderv.quarto.pub/create-tabsets-panel-from-r-code/
+See live at
+<https://quartopub.com/sites/examples/create-tabsets-panel-from-r-code>
 
 </div>
 
