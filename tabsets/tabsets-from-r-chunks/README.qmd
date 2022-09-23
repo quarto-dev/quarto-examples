@@ -4,6 +4,10 @@ execute:
   engine: knitr
 ---
 
+::: {.content-visible when-format="gfm"}
+See live at https://cderv.quarto.pub/create-tabsets-panel-from-r-code/
+:::
+
 ## About this example
 
 In this example, we are presenting several tables inside a tabset panel. [Tabset panels](https://quarto.org/docs/interactive/layout.html#tabset-panel) are among [built-in component layout](https://quarto.org/docs/interactive/layout.html) for Quarto.
