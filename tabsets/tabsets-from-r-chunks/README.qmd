@@ -5,14 +5,7 @@ execute:
 ---
 
 ::: {.content-visible when-format="gfm"}
-```{r}
-#| echo: false
-#| output: asis
-if (file.exists(pub_yaml <- "_publish.yml")) {
-  url <- yaml::read_yaml(pub_yaml)[[1]][["quarto-pub"]][[1]][["url"]]
-  glue::glue("See live at <{ url }>")
-}
-```
+See live at <https://examples.quarto.pub/create-tabsets-panel-from-r-code/>
 :::
 
 ## About this example

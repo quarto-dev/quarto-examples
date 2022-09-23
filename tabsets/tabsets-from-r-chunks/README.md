@@ -2,7 +2,7 @@
 <div>
 
 See live at
-<https://quartopub.com/sites/examples/create-tabsets-panel-from-r-code>
+<https://examples.quarto.pub/create-tabsets-panel-from-r-code/>
 
 </div>
 
