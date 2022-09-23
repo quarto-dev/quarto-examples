@@ -1,0 +1,10 @@
+## `r hw`
+
+```{r}
+#| echo: false
+starwars %>%
+  filter(homeworld == hw) %>%
+  count(sex) %>%
+  head() %>%
+  gt()
+```
