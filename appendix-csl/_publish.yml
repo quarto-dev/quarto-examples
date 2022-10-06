@@ -1,0 +1,4 @@
+- source: example.qmd
+  quarto-pub:
+    - id: 08528995-8832-4fb4-9fcb-f9ca272116ee
+      url: 'https://quartopub.com/sites/examples/csl-example'

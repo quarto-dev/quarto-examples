@@ -12,6 +12,10 @@ citation:
   url: https://example.com/summarizing-output
   issued: 2022-10-01
 csl: iso690-numeric-en.csl
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/appendix-csl
 ---
 
 ## Section 1
