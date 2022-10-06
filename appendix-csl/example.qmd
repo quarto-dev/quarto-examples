@@ -1,0 +1,31 @@
+---
+title: CSL Example
+author: Charles Teague
+date: last-modified
+description: |
+  This provides an example of CSL formatting being used to control the output of references for a document. Note that the CSL provides the style for both the generated bibliography for the page, but also for the citation information for the page itself, included in the appendix.
+bibliography: example.bib
+citation:
+  type: article-journal
+  container-title: "Journal of Data Science Software"
+  doi: "10.23915/reprodocs.00010"
+  url: https://example.com/summarizing-output
+  issued: 2022-10-01
+csl: iso690-numeric-en.csl
+---
+
+## Section 1
+
+Suspendisse imperdiet ut velit sit amet cursus ^[This is an example footnote, enabled to show how footnotes appear in this case.]. Cras tempor diam urna, vel rhoncus sapien porta eget @pijnacker2. Aenean vel odio lectus. Aliquam eu neque quis orci mattis iaculis vel vel purus. Donec in augue sed elit iaculis iaculis et sit amet ex. Nulla neque magna, placerat et rutrum in, fringilla in risus. Curabitur a sagittis purus. Mauris efficitur tempor vulputate. Donec interdum, ipsum eu tempus auctor, nunc augue tempor ante, at molestie lorem risus at nulla. Nunc eget diam laoreet risus rutrum suscipit @antibayes. Maecenas sodales tortor sit amet mauris laoreet dapibus.
+
+## Section 2
+
+Suspendisse imperdiet ut velit sit amet cursus. Cras tempor diam urna, vel rhoncus sapien porta eget. Aenean vel odio lectus. Aliquam eu neque quis orci mattis iaculis vel vel purus. Donec in augue sed elit iaculis iaculis et sit amet ex. Nulla neque magna, placerat et rutrum in, fringilla in risus. Curabitur a sagittis purus. Mauris efficitur tempor vulputate. Donec interdum, ipsum eu tempus auctor, nunc augue tempor ante, at molestie lorem risus at nulla. Nunc eget diam laoreet risus rutrum suscipit. Maecenas sodales tortor sit amet mauris laoreet dapibus [@booksamp2].
+
+## Section 3
+
+Suspendisse imperdiet ut velit sit amet cursus @inpress1. Cras tempor diam urna, vel rhoncus sapien porta eget. Aenean vel odio lectus. Aliquam eu neque quis orci mattis iaculis vel vel purus. Donec in augue sed elit iaculis iaculis et sit amet ex. Nulla neque magna, placerat et rutrum in, fringilla in risus. Curabitur a sagittis purus. Mauris efficitur tempor vulputate. Donec interdum, ipsum eu tempus auctor, nunc augue tempor ante, at molestie lorem risus at nulla. Nunc eget diam laoreet risus rutrum suscipit. Maecenas sodales tortor sit amet mauris laoreet dapibus.
+
+## Acknowledgements {.appendix}
+
+This is a section that I write in the document but will appear in the appendix at the bottom.
