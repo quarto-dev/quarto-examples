@@ -1,0 +1,8 @@
+- source: computation-cells-options.qmd
+  quarto-pub:
+    - id: a093a525-fbed-4f07-9fa0-4bc4485f8666
+      url: 'https://examples.quarto.pub/css-chunk-options'
+- source: index.qmd
+  quarto-pub:
+    - id: 409dcad3-9263-4711-9b66-47af4a3b4ffa
+      url: 'https://examples.quarto.pub/css-chunk-options'

@@ -1,0 +1,41 @@
+---
+title: "Chunk options using comment-pipe syntax"
+format: 
+  html:
+    code-tools: 
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/computation-cells-options/
+engine: knitr
+---
+
+<!-- This part is about description of the example -->
+
+::: {.callout-note collapse="true"}
+
+{{< include README.qmd >}}
+
+:::
+
+<!-- below is the example itself -->
+
+```{css}
+/*| echo: false */
+h2 {
+  color: blue;
+}
+```
+
+## This will be blue
+
+In this document we have added the following `css` chunk known by the **knitr** engine
+
+```{{css}}
+/*| echo: false */
+h2 {
+  color: blue;
+}
+```
+
+By default, it is `echo: true` but we can pass some chunk option by using the language comment syntax (`/*` and `*/` here for CSS), appending pipe character `|` after start comment. 
+This is how we set the configuration to be `echo: false` and not show the content in the output document.
+
+Quarto is aware about comments character(s) for a number of language. 
