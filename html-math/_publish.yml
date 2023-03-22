@@ -1,0 +1,4 @@
+- source: html-math.qmd
+  quarto-pub:
+    - id: fb71fad1-cb9c-425e-b121-4cdbabe8c12e
+      url: 'https://examples.quarto.pub/changing-mathjax'

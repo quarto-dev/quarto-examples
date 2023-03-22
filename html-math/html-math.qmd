@@ -1,0 +1,36 @@
+---
+title: Math newline with Quarto
+format: 
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/html-math
+    html-math-method:
+      method: mathjax
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+---
+
+<!-- This part is about description of the example -->
+
+::: {.callout-note collapse="true"}
+
+{{< include README.qmd >}}
+
+:::
+
+<!-- below is the example itself -->
+
+# Equation
+
+$$
+x = 1 \\
+y = 2
+$$
+
+The equation above has been creating using a newline `\\`
+
+```
+x = 1 \\
+y = 2
+```
+
+This is unfortunately not yet possible with Mathjax 3 and require Mathjax 2 (more details in this [Mathjax discussion](https://github.com/mathjax/MathJax/issues/2312))
