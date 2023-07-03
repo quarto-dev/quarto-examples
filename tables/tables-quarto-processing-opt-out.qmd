@@ -3,7 +3,7 @@ title: "Disabling processing for tables when using `knitr::kable()` in R"
 format: 
   html:
     code-tools: 
-      source: https://github.com/quarto-dev/quarto-examples/blob/main/tables/
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/tables/tables-quarto-processing-opt-out.qmd
 engine: knitr
 ---
 
