@@ -1,0 +1,4 @@
+- source: tables-quarto-processing-opt-out.qmd
+  quarto-pub:
+    - id: 0aef9d98-fa9d-4359-b108-567dbbf75860
+      url: 'https://examples.quarto.pub/opt-out-table-processing-kable'

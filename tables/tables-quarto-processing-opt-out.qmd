@@ -1,0 +1,123 @@
+---
+title: "Disabling processing for tables when using `knitr::kable()` in R"
+format: 
+  html:
+    code-tools: 
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/tables/
+engine: knitr
+---
+
+::: callout-note
+
+## TL;DR
+
+In some specific case where you don't get the output you expect from specific feature on tables (for example, when producing tables with a R function), you may require to opt-out Quarto Tables processing by adding a specific attributes on the table ([Docs](https://quarto.org/docs/authoring/tables.html#disabling-quarto-table-processing))
+
+This example shows how to do that when using `knitr::kable()` ecosystem.
+:::
+
+
+## About Tables Processing with Quarto
+
+Quarto has specific features for tables : https://quarto.org/docs/authoring/tables.html. It was designed to handle Tables natively for a good output in all formats. For that Quarto will do a specific processing for Markdown tables, but also for HTML tables that will be parsed the same way as Markdown tables. 
+
+If this has a lot of advantage for offering some specific feature to tables, it will also have the side effect on tables produced by other tools. That is why Quarto offers an opt-out mechanism to [disable Quarto processing](https://quarto.org/docs/authoring/tables.html#disabling-quarto-table-processing) using a specific attributes on tables
+
+```html
+<table data-quarto-disable-processing="true">
+  ...
+</table>
+```
+
+## Tables Produced with R Code
+
+Tables can also be produced using R packages as R has several packages able to produce HTML tables. These packages often introduced some specific feature for tables, which Quarto could ignore and even overwrite.
+
+Let's take the example of **kableExtra** R package (https://haozhu233.github.io/kableExtra/). This package extends **knitr** and will produce HTML tables. Among the feature `kable_styling()` helps to set some style. 
+
+Let's see what Quarto does with the output. 
+
+We load the package 
+
+```{r}
+library(kableExtra)
+```
+
+And produce a table using the following code 
+
+```{r}
+#| label: tbl-res1
+#| tbl-cap: "mtcars with full_width = FALSE doesn't work."
+#| echo: fenced
+kable(mtcars[,1:3]) |>
+  kable_styling(full_width = FALSE)
+```
+
+
+As we can `full_width = FALSE` does not apply. Quarto table processing needs to be opt-out. This can be done easily because `knitr::kable()` has [a specific way to set arbitrary attributes on a table](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables): 
+
+```{r}
+#| label: tbl-res2
+#| tbl-cap: "mtcars with full_width = FALSE"
+#| echo: fenced
+kable(mtcars[,1:3], table.attr = "quarto-disable-processing=true") |>
+  kable_styling(full_width = FALSE)
+```
+
+Deactivating the processing for this tables allows the `full_width = FALSE` to work. However, the default formatting applied by Quarto is lost. It would be required to add it back using specific feature from the R functions used. With **kableExtra** we can do that: 
+
+```{r}
+#| label: tbl-res3
+#| tbl-cap: "mtcars with full_width = FALSE and some styles applied."
+#| echo: fenced
+kable(mtcars[,1:3], table.attr = "quarto-disable-processing=true") |>
+  kable_styling(c("striped", "bordered"), full_width = FALSE)
+```
+
+
+### Opt-out Globally instead of Chunk by Chunk
+
+**knitr** allows to set the `table.attr` as an R options. This means the following can be done in two ways 
+
+1. Setting the option globally in a setup chunk 
+
+    ````markdown
+    ---
+    title: "Disabling processing"
+    ---
+
+    ```{{r}}
+    library(kableExtra)
+    options(knitr.table.html.attr = "quarto-disable-processing=true")
+    ```
+
+    ```{{r}}
+    #| label: tbl-results2
+    #| tbl-cap: "mtcars with full_width = FALSE"
+    kable(mtcars[,1:3]) |>
+    kable_styling(c("striped", "bordered"), full_width = FALSE)
+    ```
+    ````
+
+2. Setting the option globally using **knitr**'s chunk option `R.options` set globally in YAML header [as Quarto offers](https://quarto.org/docs/computations/r.html#knitr-options)
+
+    ````markdown
+    ---
+    title: "Disabling processing"
+    knitr: 
+    opts_chunk: 
+        R.options: 
+        knitr.table.html.attr: "quarto-disable-processing=true"
+    ---
+
+    ```{{r}}
+    library(kableExtra)
+    ```
+
+    ```{{r}}
+    #| label: tbl-results2
+    #| tbl-cap: "mtcars with full_width = FALSE"
+    kable(mtcars[,1:3]) |>
+    kable_styling(c("striped", "bordered"), full_width = FALSE)
+    ```
+    ````
