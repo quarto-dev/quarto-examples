@@ -1,0 +1,66 @@
+---
+title: "Use Plotly graph for HTML and PDF output"
+format: 
+  html: default
+  pdf: default
+---
+
+::: {.callout-note collapsable=true}
+
+## TL;DR
+
+[Plotly for Python](https://plotly.com/python/) will produce HTML output and it needs to be handled specifically if you want to target PDF output too. 
+
+This document shows an example of following [plotly doc](https://plotly.com/python/static-image-export/#display-bytes-as-image-using-ipythondisplayimage) to save output as an image to include in PDF.
+
+It leverages quarto [conditional content feature](https://quarto.org/docs/authoring/conditional.html)
+
+:::
+
+
+## Two Figures
+
+```{python}
+#| echo: true
+#| output: false
+import plotly.graph_objects as go
+from IPython.display import Image
+import numpy as np
+np.random.seed(1)
+
+N = 100
+x = np.random.rand(N)
+y = np.random.rand(N)
+colors = np.random.rand(N)
+sz = np.random.rand(N) * 30
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+    x=x,
+    y=y,
+    mode="markers",
+    marker=go.scatter.Marker(
+        size=sz,
+        color=colors,
+        opacity=0.6,
+        colorscale="Viridis"
+    )
+))
+```
+
+::: {.content-visible when-format='pdf'}
+```{python}
+#| echo: true
+img_bytes = fig.to_image(format="png")
+
+Image(img_bytes)
+```
+
+:::
+
+::: {.content-visible when-format='html'}
+```{python}
+#| echo: true
+fig.show()
+```
+:::
