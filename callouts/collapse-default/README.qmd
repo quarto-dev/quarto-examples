@@ -1,0 +1,8 @@
+---
+format: gfm
+wrap: preserve
+---
+
+See live at <https://examples.quarto.pub/collapse-callout/>
+
+{{< include _about.qmd >}}
