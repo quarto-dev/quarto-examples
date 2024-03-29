@@ -1,0 +1,4 @@
+- source: collapse-callout.qmd
+  quarto-pub:
+    - id: 1f14fb32-9763-45d7-aeb4-3cb6df0667ea
+      url: 'https://examples.quarto.pub/collapse-callout'
