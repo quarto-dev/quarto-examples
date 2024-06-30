@@ -1,0 +1,4 @@
+jupyter
+plotly
+kaleido
+numpy
