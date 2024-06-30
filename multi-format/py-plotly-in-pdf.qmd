@@ -51,6 +51,7 @@ fig.add_trace(go.Scatter(
 ::: {.content-visible when-format='pdf'}
 ```{python}
 #| echo: true
+import kaleido # to avoid 'ValueError: Image export using the "kaleido" engine requires the kaleido package' Ref: https://stackoverflow.com/a/72192448
 img_bytes = fig.to_image(format="png")
 
 Image(img_bytes)
