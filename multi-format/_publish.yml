@@ -1,0 +1,4 @@
+- source: py-plotly-in-pdf.qmd
+  quarto-pub:
+    - id: 57e1f786-f388-42ba-9181-0a5a68d198a5
+      url: 'https://examples.quarto.pub/use-plotly-graph-for-html-and-pdf-output'
