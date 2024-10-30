@@ -1,0 +1,13 @@
+---
+format: gfm
+---
+
+::: {.content-visible when-format="commonmark"}
+See live at 
+:::
+
+## About this example
+
+This folders contains example of Revealjs Presentation and use of callouts
+
+- [What does Callouts looks like in Revealjs ?](https://examples.quarto.pub/revealjs-default-callouts-styles)

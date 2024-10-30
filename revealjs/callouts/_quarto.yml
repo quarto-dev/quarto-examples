@@ -1,0 +1,8 @@
+project: 
+  type: default
+  render: 
+    - '*.qmd'
+    - README.qmd
+
+format: 
+  revealjs: default

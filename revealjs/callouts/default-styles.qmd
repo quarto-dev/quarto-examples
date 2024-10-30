@@ -1,0 +1,472 @@
+---
+title: "Callouts in Revealjs slides"
+format: revealjs
+---
+
+## No callout
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+
+## Note
+
+::: {.callout-note}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Warning 
+
+::: {.callout-warning}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Important 
+
+::: {.callout-important}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Tip
+
+::: {.callout-tip}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## caution
+
+::: {.callout-caution}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Note
+
+::: {.callout-note appearance="simple"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Warning 
+
+::: {.callout-warning appearance="simple"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Important 
+
+::: {.callout-important appearance="simple"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Tip
+
+::: {.callout-tip appearance="simple"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## caution
+
+::: {.callout-caution appearance="simple"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Note
+
+::: {.callout-note appearance="minimal"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Warning 
+
+::: {.callout-warning appearance="minimal"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Important 
+
+::: {.callout-important appearance="minimal"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Tip
+
+::: {.callout-tip appearance="minimal"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## caution
+
+::: {.callout-caution appearance="minimal"}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Note
+
+::: {.callout-note icon=false}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Warning 
+
+::: {.callout-warning icon=false}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Important 
+
+::: {.callout-important icon=false}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Tip
+
+::: {.callout-tip icon=false}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## caution
+
+::: {.callout-caution icon=false}
+
+Content with inline code `1 + 1` and block
+
+```{.python}
+1 + 1
+```
+:::
+
+## Note
+
+::: {.callout-note}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Warning 
+
+::: {.callout-warning}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Important 
+
+::: {.callout-important}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Tip
+
+::: {.callout-tip}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## caution
+
+::: {.callout-caution}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Note
+
+::: {.callout-note appearance="simple"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Warning 
+
+::: {.callout-warning appearance="simple"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Important 
+
+::: {.callout-important appearance="simple"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Tip
+
+::: {.callout-tip appearance="simple"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## caution
+
+::: {.callout-caution appearance="simple"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Note
+
+::: {.callout-note appearance="minimal"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Warning 
+
+::: {.callout-warning appearance="minimal"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Important 
+
+::: {.callout-important appearance="minimal"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Tip
+
+::: {.callout-tip appearance="minimal"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## caution
+
+::: {.callout-caution appearance="minimal"}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Note
+
+::: {.callout-note icon=false}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Warning 
+
+::: {.callout-warning icon=false}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Important 
+
+::: {.callout-important icon=false}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## Tip
+
+::: {.callout-tip icon=false}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::
+
+## caution
+
+::: {.callout-caution icon=false}
+
+{{< lipsum 1 >}}
+
+* List item 1
+* List item 2
+
+Some content
+:::

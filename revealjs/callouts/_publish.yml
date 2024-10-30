@@ -1,0 +1,4 @@
+- source: default-styles.qmd
+  quarto-pub:
+    - id: 39708a33-f56b-46ca-9ee5-135127270f18
+      url: https://examples.quarto.pub/revealjs-default-callouts-styles
