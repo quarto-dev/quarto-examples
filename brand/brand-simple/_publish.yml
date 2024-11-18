@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 4d098788-20ce-46f0-834f-bd6a4d88bc8c
+      url: https://examples.quarto.pub/brand-simple
