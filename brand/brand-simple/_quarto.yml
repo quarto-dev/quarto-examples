@@ -7,4 +7,4 @@ website:
     title: "Demo CO"
     tools:
       - icon: github
-        href: https://github.com/quarto-dev/quarto-examples/brand/brand-simple/
+        href: https://github.com/quarto-dev/quarto-examples/tree/main/brand/brand-simple
