@@ -3,7 +3,7 @@ title: "Brand"
 format:
   html: 
     other-links:
-      - href: index-dashboard.html
+      - href: dashboard.html
         icon: speedometer
         text: Dashboard
   typst: default
@@ -20,3 +20,9 @@ This is a document themed using [**brand.yml**](https://posit-dev.github.io/bran
 ## Subheading
 
 {{< lipsum 1 >}}
+
+::: {.content-visible when-format="dashboard"}
+
+
+
+:::

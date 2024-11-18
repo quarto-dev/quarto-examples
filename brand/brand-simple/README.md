@@ -1,12 +1,15 @@
 # brand-simple
 
 
+<https://examples.quarto.pub/brand-simple/>
+
 This is a simple example of using
 [**brand.yml**](https://posit-dev.github.io/brand-yml/) across a range
 of Quarto supported formats.
 
-The project is a website with a single document `index.qmd` that is
-rendered multiple formats: `html`, `revealjs`, `dashboard`, `typst`.
+The project is a website with a homepage, `index.qmd`, that is rendered
+to multiple formats: `html`, `revealjs`, and `typst`, and a dashboard,
+`dashboard.qmd`.
 
 The brand information stored in `_brand.yml` is:
 
