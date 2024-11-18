@@ -1,0 +1,22 @@
+---
+title: "Brand"
+format:
+  html: 
+    other-links:
+      - href: index-dashboard.html
+        icon: speedometer
+        text: Dashboard
+  typst: default
+  revealjs:
+    output-file: index-reveal.html
+  dashboard: 
+    output-file: index-dashboard.html
+---
+
+## Overview
+
+This is a document themed using [**brand.yml**](https://posit-dev.github.io/brand-yml/)
+
+## Subheading
+
+{{< lipsum 1 >}}
