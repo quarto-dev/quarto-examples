@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "`meta` Shortcodes for Precise Includes"
+  repo-url: https://github.com/AshleyHenry15/blog-quarto-meta-vars
+  repo-actions: [issue]
+  navbar: 
+    left:
+      - href: index.qmd
+        text: "Home"
+      - href: new-york.qmd
+      - href: pa.qmd
+      
+
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+   # code-links: 
+    #  repo: https://github.com/AshleyHenry15/blog-quarto-meta-vars
+
+
+

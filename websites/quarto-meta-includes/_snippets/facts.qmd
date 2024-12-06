@@ -1,0 +1,11 @@
+{{< meta state >}} covers approximately {{< meta square-miles >}} making it the {{< meta size-rank >}} largest state in the United States. As of 2023, {{< meta state >}} has an approximate population of about {{< meta population >}}.
+
+{{< meta state >}}'s official flower is the {{< meta flower >}}, pictured below:
+
+![The official {{< meta state >}} state flower, the {{< meta flower >}}](../images/{{< meta state-abbr >}}/flower.png)
+
+Lastly, {{< meta state >}}'s official animal is the {{< meta animal >}}, pictured below:
+
+![The official {{< meta state >}} state animal, the {{< meta animal >}}](../images/{{< meta state-abbr >}}/animal.png)
+
+

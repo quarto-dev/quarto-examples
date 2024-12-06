@@ -1,0 +1,10 @@
+---
+title: "`meta` Shortcodes for Precise Includes"
+---
+
+This is an example site to showcase the use of `meta` shortcodes for more precise includes using Quarto.
+
+Features showcased:
+
+- meta
+- includes

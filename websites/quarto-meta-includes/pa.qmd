@@ -1,0 +1,12 @@
+---
+title: Pennsylvania
+state-abbr: pa
+state: Pennsylvania
+size-rank: 33rd
+square-miles: 46,055
+population: 12.9 million
+flower: Mountain Laurel
+animal: White-tailed Deer
+---
+
+{{< include _snippets/facts.qmd >}}
