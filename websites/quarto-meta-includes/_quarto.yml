@@ -3,8 +3,9 @@ project:
 
 website:
   title: "`meta` Shortcodes for Precise Includes"
-  repo-url: https://github.com/AshleyHenry15/blog-quarto-meta-vars
-  repo-actions: [issue]
+  repo-url: https://github.com/quarto-dev/quarto-examples
+  repo-subdir: websites/quarto-meta-includes
+  repo-actions: [source]
   navbar: 
     left:
       - href: index.qmd
@@ -19,8 +20,6 @@ format:
     theme: yeti
     css: styles.css
     toc: true
-   # code-links: 
-    #  repo: https://github.com/AshleyHenry15/blog-quarto-meta-vars
 
 
 
