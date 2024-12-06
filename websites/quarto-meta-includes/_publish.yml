@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 5dac494e-2416-4aec-b16e-740cd3391972
+      url: https://examples.quarto.pub/quarto-meta-includes
