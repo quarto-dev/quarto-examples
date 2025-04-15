@@ -1,0 +1,16 @@
+project:
+  type: website
+
+website:
+  title: "Simple Brand Example - Dark Mode"
+  navbar:
+    title: "Demo CO"
+    tools:
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-examples/tree/main/brand/brand-simple-dark
+
+brand:
+  light: _brand.yml
+  dark: _brand-dark.yml
+  
+  

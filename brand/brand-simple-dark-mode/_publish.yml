@@ -1,0 +1,5 @@
+- source: project
+  quarto-pub:
+    - id: e013ed23-f589-4305-9d1e-c320e6491939
+      url: https://examples.quarto.pub/brand-simple-dark-mode/
+
