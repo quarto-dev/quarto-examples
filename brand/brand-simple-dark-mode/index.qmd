@@ -1,0 +1,29 @@
+---
+title: "Brand - Dark mode"
+format:
+  html: 
+    respect-user-color-scheme: true
+    other-links:
+      - href: dashboard.html
+        icon: speedometer
+        text: Dashboard
+  typst: default
+  revealjs:
+    output-file: index-reveal.html
+  dashboard: 
+    output-file: index-dashboard.html
+---
+
+## Overview
+
+This is a document themed using [**brand.yml**](https://posit-dev.github.io/brand-yml/) with both light and dark versions.
+
+## Subheading
+
+{{< lipsum 1 >}}
+
+::: {.content-visible when-format="dashboard"}
+
+
+
+:::

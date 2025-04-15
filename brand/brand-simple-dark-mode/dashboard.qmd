@@ -1,0 +1,24 @@
+---
+title: "Dashboard"
+format: dashboard
+---
+
+## Row
+
+::: {.valuebox icon="currency-dollar" color="primary"}
+Sales
+
+5.6k
+:::
+
+::: {.valuebox icon="graph-up" color="primary"}
+Change
+
+22%
+:::
+
+{{< lipsum 1 >}}
+
+## Row
+
+{{< placeholder 400 100 format=svg >}}
