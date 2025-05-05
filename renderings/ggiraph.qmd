@@ -1,0 +1,24 @@
+---
+title: ggiraph
+---
+
+```{r}
+#| echo: false
+#| warning: false
+library(quarto)
+library(ggplot2)
+library(ggiraph)
+
+light_theme <- theme_brand_ggplot("light-brand.yml")
+dark_theme <- theme_brand_ggplot("dark-brand.yml")
+```
+
+```{r}
+#| renderings: [light, dark]
+cars <- ggplot(mtcars, aes(mpg, wt)) +
+  geom_point_interactive(aes(colour = factor(cyl), tooltip = rownames(mtcars))) +
+  scale_colour_manual(values = c("darkorange", "purple", "cyan4"))
+
+girafe(ggobj = cars + light_theme)
+girafe(ggobj = cars + dark_theme)
+```

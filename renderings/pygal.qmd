@@ -1,0 +1,59 @@
+---
+title: pygal
+engine: jupyter
+keep-md: true
+---
+
+```{python}
+from quarto import theme_brand_pygal
+
+light_style = theme_brand_pygal('light-brand.yml')
+dark_style = theme_brand_pygal('dark-brand.yml')
+```
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+
+# https://stackoverflow.com/questions/36322683/pygal-charts-not-displaying-tooltips-in-jupyter-ipython-notebook#45813876
+
+from IPython.display import display, HTML
+import pygal
+base_html = """
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="text/javascript" src="http://kozea.github.com/pygal.js/javascripts/svg.jquery.js"></script>
+  <script type="text/javascript" src="https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js""></script>
+  </head>
+  <body>
+    <figure>
+      {rendered_chart}
+    </figure>
+  </body>
+</html>
+"""
+
+def galplot(chart):
+    rendered_chart = chart.render(is_unicode=True)
+    plot_html = base_html.format(rendered_chart=rendered_chart)
+    display(HTML(plot_html))
+
+chart = pygal.StackedLine(fill=True, interpolate='cubic', style=light_style)
+chart.add('A', [1, 3,  5, 16, 13, 3,  7])
+chart.add('B', [5, 2,  3,  2,  5, 7, 17])
+chart.add('C', [6, 10, 9,  7,  3, 1,  0])
+chart.add('D', [2,  3, 5,  9, 12, 9,  5])
+chart.add('E', [7,  4, 2,  1,  2, 10, 0])
+
+galplot(chart)
+
+chart = pygal.StackedLine(fill=True, interpolate='cubic', style=dark_style)
+chart.add('A', [1, 3,  5, 16, 13, 3,  7])
+chart.add('B', [5, 2,  3,  2,  5, 7, 17])
+chart.add('C', [6, 10, 9,  7,  3, 1,  0])
+chart.add('D', [2,  3, 5,  9, 12, 9,  5])
+chart.add('E', [7,  4, 2,  1,  2, 10, 0])
+
+galplot(chart)
+```
