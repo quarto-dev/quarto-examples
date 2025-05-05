@@ -1,6 +1,10 @@
 ---
 title: ggplot
 keep-md: true
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/ggplot.qmd
 ---
 
 ```{r}

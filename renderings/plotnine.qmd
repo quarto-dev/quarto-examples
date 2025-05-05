@@ -5,6 +5,10 @@ date: "2025-01-22 14:25:54.403762"
 engine: jupyter
 keep-md: true
 ipynb-shell-interactivity: all
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/plotnine.qmd
 ---
 
 ## Question

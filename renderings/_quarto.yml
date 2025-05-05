@@ -21,11 +21,12 @@ website:
       - pygal.qmd
       - seaborn.qmd
       - thematic.qmd
-
 brand:
   light: light-brand.yml
   dark: dark-brand.yml
-
 theme:
   light: brand
   dark: [brand, dark-fixups.scss]
+format:
+  html:
+    respect-user-color-scheme: true
