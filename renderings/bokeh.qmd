@@ -2,6 +2,10 @@
 title: bokeh
 author: "anthropic claude-3-5-sonnet-latest"
 date: 2025-01-06
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/bokeh.qmd
 ---
 
 ## Question

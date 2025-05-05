@@ -1,5 +1,9 @@
 ---
 title: heatmaply
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/heatmaply.qmd
 ---
 
 Note, this is not fully working - see e.g. the legend background and the labels.

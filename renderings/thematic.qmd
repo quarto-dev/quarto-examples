@@ -3,6 +3,10 @@ title: thematic
 execute:
   echo: false
   warning: false
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/thematic.qmd
 ---
 
 ```{r}

@@ -1,5 +1,9 @@
 ---
 title: ggiraph
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/ggiraph.qmd
 ---
 
 ```{r}

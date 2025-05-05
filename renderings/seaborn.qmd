@@ -4,6 +4,10 @@ engine: jupyter
 keep-md: true
 author: "openai gpt-4o"
 date: 2024-12-25 18:31:06.502548
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/seaborn.qmd
 ---
 
 # How to Draw a Violin Plot of the Iris Data Using Seaborn

@@ -3,6 +3,10 @@ title: great tables
 engine: jupyter
 keep-md: true
 ipynb-shell-interactivity: all
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/great-tables.qmd
 ---
 
 ```{python}

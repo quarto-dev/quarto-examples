@@ -2,6 +2,10 @@
 title: plotly-python
 author: "openai gpt-4o"
 date: "2024-10-23 16:52:22.554560"
+format:
+  html:
+    code-tools:
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/plotly-python.qmd
 ---
 
 # Question
