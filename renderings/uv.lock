@@ -1490,21 +1490,9 @@ wheels = [
 
 [[package]]
 name = "quarto"
-version = "0.2.11"
-source = { path = "../../quarto-python/dist/quarto-0.2.11-py3-none-any.whl" }
+version = "0.2.0"
+source = { git = "https://github.com/quarto-dev/quarto-python#d6eb0c39842f9093d1dfbbe6a73440cde357f24d" }
 dependencies = [
-    { name = "ipykernel" },
-    { name = "jupyter-core" },
-    { name = "nbclient" },
-    { name = "nbformat" },
-    { name = "pyyaml" },
-]
-wheels = [
-    { filename = "quarto-0.2.11-py3-none-any.whl", hash = "sha256:cf8e2b3e89ab19056d3ea33bfe344bbe861699e2c416a5346b3ac9fbf12cf849" },
-]
-
-[package.metadata]
-requires-dist = [
     { name = "ipykernel" },
     { name = "jupyter-core" },
     { name = "nbclient" },
@@ -1543,7 +1531,7 @@ requires-dist = [
     { name = "plotly", specifier = ">6" },
     { name = "plotnine", specifier = ">=0.14.5" },
     { name = "pygal", specifier = ">=3.0.5" },
-    { name = "quarto", path = "../../quarto-python/dist/quarto-0.2.11-py3-none-any.whl" },
+    { name = "quarto", git = "https://github.com/quarto-dev/quarto-python" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "vega-datasets", specifier = ">=0.9.0" },
