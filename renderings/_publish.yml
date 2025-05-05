@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: a22b69eb-2309-4489-8eb4-6432f489b51f
+      url: https://examples.quarto.pub/lightdark-renderings-examples
