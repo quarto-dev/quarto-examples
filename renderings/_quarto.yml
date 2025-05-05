@@ -1,0 +1,31 @@
+project:
+  type: website
+website:
+  title: "light/dark renderings examples"
+  sidebar:
+    style: "docked"
+    contents:
+      - altair.qmd
+      - bokeh.qmd
+      - flextable.qmd
+      - ggiraph.qmd
+      - ggplot.qmd
+      - great-tables.qmd
+      - gt.qmd
+      - heatmaply.qmd
+      - leaflet.qmd
+      - matplotlib.qmd
+      - plotly-python.qmd
+      - plotly-r.qmd
+      - plotnine.qmd
+      - pygal.qmd
+      - seaborn.qmd
+      - thematic.qmd
+
+brand:
+  light: light-brand.yml
+  dark: dark-brand.yml
+
+theme:
+  light: brand
+  dark: [brand, dark-fixups.scss]

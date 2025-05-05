@@ -1,0 +1,21 @@
+[project]
+name = "quarto-light-dark-experiments"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "altair>=5.5.0",
+    "bokeh>=3.6.3",
+    "bokeh-sampledata>=2024.2",
+    "great-tables>=0.16.1",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.0",
+    "plotly>6",
+    "plotnine>=0.14.5",
+    "pygal>=3.0.5",
+    "quarto>=0.2.0",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "vega-datasets>=0.9.0",
+]

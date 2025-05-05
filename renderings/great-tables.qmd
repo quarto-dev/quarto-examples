@@ -1,0 +1,35 @@
+---
+title: great tables
+engine: jupyter
+keep-md: true
+ipynb-shell-interactivity: all
+---
+
+```{python}
+#| echo: false
+import yaml
+from quarto import theme_brand_great_tables
+
+
+light_theme = theme_brand_great_tables('light-brand.yml')
+dark_theme = theme_brand_great_tables('dark-brand.yml')
+```
+
+
+```{python}
+#| renderings: [light, dark]
+from great_tables import GT, exibble
+from IPython.display import display
+
+gt_ex = (
+  GT(exibble.head(5), rowname_col="row", groupname_col="group")
+    .tab_header("THE HEADING", "(a subtitle)")
+    .tab_stubhead("THE STUBHEAD")
+    .tab_source_note("THE SOURCE NOTE")
+)
+
+gt_ex.tab_options(**light_theme)
+gt_ex.tab_options(**dark_theme)
+```
+
+{{< lipsum 2 >}}

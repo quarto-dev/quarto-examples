@@ -1,0 +1,140 @@
+---
+title: bokeh
+author: "anthropic claude-3-5-sonnet-latest"
+date: 2025-01-06
+---
+
+## Question
+
+How can we create a working scatter plot matrix (SPLOM) of the iris dataset using Bokeh?
+
+## Overview
+
+We’ll create an interactive scatter plot matrix visualization of the iris dataset using Bokeh, with correct color mapping for different species.
+
+Note: Bokeh dark theme helper is incomplete due to lack of documentation (?)
+
+## Code
+
+```{python}
+#| echo: false
+from quarto import theme_brand_bokeh
+
+light_theme = theme_brand_bokeh('light-brand.yml')
+dark_theme = theme_brand_bokeh('dark-brand.yml')
+```
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+from bokeh.plotting import figure, show
+from bokeh.layouts import gridplot
+from bokeh.io import output_notebook
+from bokeh.sampledata.iris import flowers
+from bokeh.models import ColumnDataSource, ColorBar
+from bokeh.transform import factor_cmap
+
+# Enable notebook output; hiding banner helps the first plot
+# with issue described below
+output_notebook(hide_banner=True)
+
+# Create ColumnDataSource for the data
+source = ColumnDataSource(flowers)
+
+# Define the features we want to plot
+features = ['petal_length', 'petal_width', 'sepal_length', 'sepal_width']
+
+# Create color mapper
+color_mapper = factor_cmap('species',
+                         ['#1f77b4', '#ff7f0e', '#2ca02c'],
+                         ['setosa', 'versicolor', 'virginica'])
+
+# Create the plots matrix
+plots = []
+tooltips = [
+    ('Species', '@species'),
+    ('Value', '$data_x, $data_y')
+]
+
+for i, y in enumerate(features):
+    row = []
+    for x in features:
+        plot = figure(width=200, height=200,
+                     tooltips=tooltips,
+                     title="" if x != features[0] or i != 0 else "Iris SPLOM")
+
+        # Add scatter points with proper color mapping
+        plot.scatter(x, y,
+                    color=color_mapper,
+                    size=8,
+                    alpha=0.5,
+                    legend_field='species',
+                    source=source)
+
+        # Configure axes
+        if i != len(features)-1:
+            plot.xaxis.visible = False
+        else:
+            plot.xaxis.axis_label = x
+
+        if x != features[0]:
+            plot.yaxis.visible = False
+        else:
+            plot.yaxis.axis_label = y
+
+        # Show legend only on top-right plot
+        if i != 0 or x != features[-1]:
+            plot.legend.visible = False
+        else:
+            plot.legend.click_policy = "hide"
+
+        plot.grid.grid_line_color = None
+        row.append(plot)
+    plots.append(row)
+
+# Create and show the grid
+grid = gridplot(plots)
+
+light_theme()
+show(grid)
+
+dark_theme()
+show(grid)
+```
+
+Bokeh has issues with emitting extra outputs. Quarto is partly fixing this up but the second plot will currently not work with `renderings`:
+
+```{python}
+#| renderings: [light, dark]
+light_theme()
+show(grid)
+
+dark_theme()
+show(grid)
+```
+
+## Explanation
+
+This code creates a violin plot of the sepal length distribution for each species in the Iris dataset using Bokeh. Here's a breakdown of what the code does:
+
+1. We start by importing the necessary libraries, including Pandas for data manipulation, NumPy for numerical operations, and various Bokeh modules for plotting.
+
+2. We load the Iris dataset using scikit-learn's `load_iris()` function and convert it to a Pandas DataFrame for easy manipulation.
+
+3. We prepare the data for the violin plot by defining the categories (iris species) and choosing a color palette.
+
+4. We create a Bokeh figure with appropriate titles and labels.
+
+5. For each iris species, we:
+   - Subset the data for that species.
+   - Compute the kernel density estimation (KDE) using NumPy's histogram function.
+   - Scale the KDE to create the violin shape.
+   - Add the violin shape to the plot using Bokeh's `patch` method, creating a symmetrical violin by mirroring the shape.
+
+6. We customize the plot by removing the x-axis grid, setting the y-axis range, and adding axis labels.
+
+7. Finally, we display the plot using Bokeh's `show` function.
+
+The resulting violin plot will show the distribution of sepal lengths for each iris species. The width of each "violin" represents the frequency of data points at that y-value, giving us a clear visualization of the data distribution. This allows us to compare not just the central tendencies of each species' sepal length, but also the spread and shape of the distributions.
+
+This visualization can help us identify differences between the species. For example, we might see that one species has a broader distribution of sepal lengths, while another has a more concentrated distribution. We might also observe multimodal distributions or other interesting patterns that wouldn't be apparent from simple summary statistics.

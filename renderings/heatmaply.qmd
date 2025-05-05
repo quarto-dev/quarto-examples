@@ -1,0 +1,28 @@
+---
+title: heatmaply
+---
+
+Note, this is not fully working - see e.g. the legend background and the labels.
+
+Although the plotly theming partly works, it [looks like heatmaply has a different way to get the rest of the theming right](https://github.com/talgalili/heatmaply/issues/82).
+
+```{r}
+#| echo: false
+#| warning: false
+library(heatmaply)
+library(quarto)
+
+light_theme <- theme_brand_plotly('light-brand.yml')
+dark_theme <- theme_brand_plotly('dark-brand.yml')
+```
+
+
+```{r}
+#| warning: false
+#| renderings: [light, dark]
+
+fig <- heatmaply(mtcars, k_row = 3, k_col = 2)
+
+fig |> light_theme()
+fig |> dark_theme()
+```

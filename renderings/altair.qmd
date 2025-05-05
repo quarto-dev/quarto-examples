@@ -1,0 +1,120 @@
+---
+title: altair
+engine: jupyter
+keep-md: true
+---
+
+
+```{python}
+from quarto import theme_brand_altair
+import altair as alt
+
+light_theme = theme_brand_altair('light-brand.yml')
+dark_theme = theme_brand_altair('dark-brand.yml')
+
+alt.theme.register('light_theme', enable=False)(light_theme)
+alt.theme.register('dark_theme', enable=False)(dark_theme);
+```
+
+```{python}
+#| echo: false
+
+# load a sample dataset as a pandas DataFrame
+from vega_datasets import data
+cars = data.cars()
+_ = alt.renderers.enable('html')
+```
+
+### No crossref or caption
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+
+chart = alt.Chart(cars).mark_point().encode(
+        x='Horsepower',
+        y='Miles_per_Gallon',
+        color='Origin',
+    ).properties(width=800, height=500).interactive()
+
+alt.theme.enable('light_theme')
+chart.show()
+
+alt.theme.enable('dark_theme')
+chart.show()
+```
+
+
+### with crossref but no caption
+
+::: {#fig-altair-hp-year}
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+
+chart = alt.Chart(cars).mark_point().encode(
+        x='Year',
+        y='Horsepower',
+        color='Origin',
+    ).properties(width=800, height=500).interactive()
+
+alt.theme.enable('light_theme')
+chart.show()
+
+alt.theme.enable('dark_theme')
+chart.show()
+```
+
+:::
+
+### caption but no crossref
+
+::: {}
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+
+chart = alt.Chart(cars).mark_point().encode(
+        x='Horsepower',
+        y='Acceleration',
+        color='Origin',
+    ).properties(width=800, height=500).interactive()
+
+alt.theme.enable('light_theme')
+chart.show()
+
+alt.theme.enable('dark_theme')
+chart.show()
+```
+
+cars dataset, acceleration by horsepower
+:::
+
+### with crossref and caption
+
+
+::: {#fig-altair-cars-acc-year}
+
+```{python}
+#| echo: false
+#| renderings: [light, dark]
+
+chart = alt.Chart(cars).mark_point().encode(
+        x='Year',
+        y='Acceleration',
+        color='Origin',
+    ).properties(width=800, height=500).interactive()
+
+alt.theme.enable('light_theme')
+chart.show()
+
+alt.theme.enable('dark_theme')
+chart.show()
+```
+
+cars dataset, acceleration by year
+:::
+
+{{< lipsum 2 >}}

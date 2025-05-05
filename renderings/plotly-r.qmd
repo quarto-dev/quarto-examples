@@ -1,0 +1,97 @@
+---
+title: plotly-r
+execute:
+  echo: false
+  warning: false
+---
+
+```{r}
+#| echo: false
+#| warning: false
+library(quarto)
+library(plotly)
+
+light_theme <- theme_brand_plotly('light-brand.yml')
+dark_theme <- theme_brand_plotly('dark-brand.yml')
+```
+
+### no caption or crossref
+
+```{r}
+#| renderings: [light, dark]
+fig <- plot_ly(iris, x = ~Species, y = ~Sepal.Width, type = 'violin',
+               box = list(visible = TRUE),
+               meanline = list(visible = TRUE),
+               points = 'all')
+
+fig |> light_theme()
+
+fig |> dark_theme()
+```
+
+
+### crossref, no caption
+
+::: {#fig-plotly-sepal-length}
+
+```{r}
+#| renderings: [light, dark]
+
+fig <- plot_ly(iris, x = ~Species, y = ~Sepal.Length, type = 'violin',
+               box = list(visible = TRUE),
+               meanline = list(visible = TRUE),
+               points = 'all')
+
+fig |> light_theme()
+
+fig |> dark_theme()
+```
+
+:::
+
+### caption, no crossref
+
+::: {}
+```{r}
+#| renderings: [light, dark]
+
+# Load the iris dataset
+data("iris")
+
+fig <- plot_ly(iris, x = ~Species, y = ~Petal.Width, type = 'violin',
+               box = list(visible = TRUE),
+               meanline = list(visible = TRUE),
+               points = 'all')
+
+fig |> light_theme()
+
+fig |> dark_theme()
+```
+
+Violin plot of Petal Width by Species
+
+:::
+
+
+### caption and crossref
+
+::: {#fig-plotly-petal-length}
+```{r}
+#| renderings: [light, dark]
+
+# Load the iris dataset
+data("iris")
+
+fig <- plot_ly(iris, x = ~Species, y = ~Petal.Length, type = 'violin',
+               box = list(visible = TRUE),
+               meanline = list(visible = TRUE),
+               points = 'all')
+
+fig |> light_theme()
+
+fig |> dark_theme()
+```
+
+Violin plot of Petal Length by Species
+
+:::
