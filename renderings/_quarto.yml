@@ -9,7 +9,7 @@ website:
       - bokeh.qmd
       - flextable.qmd
       - ggiraph.qmd
-      - ggplot.qmd
+      - ggplot2.qmd
       - great-tables.qmd
       - gt.qmd
       - heatmaply.qmd
