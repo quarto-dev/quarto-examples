@@ -1,10 +1,10 @@
 ---
-title: ggplot
+title: ggplot2
 keep-md: true
 format:
   html:
     code-tools:
-      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/ggplot.qmd
+      source: https://github.com/quarto-dev/quarto-examples/blob/main/renderings/ggplot2.qmd
 ---
 
 ```{r}
@@ -13,8 +13,8 @@ format:
 library(quarto)
 library(ggplot2)
 
-light_theme <- theme_brand_ggplot("light-brand.yml")
-dark_theme <- theme_brand_ggplot("dark-brand.yml")
+light_theme <- theme_brand_ggplot2("light-brand.yml")
+dark_theme <- theme_brand_ggplot2("dark-brand.yml")
 ```
 
 ```{r}
