@@ -28,7 +28,7 @@ pio.templates['dark_brand'] = theme_brand_plotly('dark-brand.yml')
 
 ```{python}
 #| echo: false
-#| renderings: [foo, light, dark]
+#| renderings: [light, dark]
 # plotly 6.* has three outputs the first time you run it.
 # without "foo" you'll get the warning
 # (W) need 2 cell-output-display for renderings light,dark; got 3
