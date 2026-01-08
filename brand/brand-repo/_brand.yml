@@ -1,0 +1,24 @@
+color:
+  palette:
+    dark-grey: "#222222"
+    blue: "#ddeaf1"
+  foreground: 
+    light: dark-grey
+    dark: blue
+  background: 
+    light: blue
+    dark: dark-grey
+  primary: 
+    light: black
+    dark: white
+  
+logo: 
+  medium: logo.png
+
+typography:
+  fonts:
+    - family: Jura
+      source: google
+  base: Jura
+  headings: Jura
+
