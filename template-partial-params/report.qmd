@@ -1,0 +1,55 @@
+---
+title: "Regional Employment Indicators"
+subtitle: "Quarterly statistical release"
+author: "Bureau of Regional Statistics"
+date: 2026-09-09
+params:
+  region: "Oregon"
+format:
+  html:
+    template-partials:
+      - title-block.html
+---
+
+```{r}
+#| echo: false
+#| output: asis
+quarto::write_yaml_metadata_block(params = params)
+```
+
+```{r}
+params$region
+```
+
+
+## Summary
+
+The region is `r params$region`.
+The same value is in the title block above, because the chunk at the top of
+this file copies `params` into the document metadata.
+
+## Rendering this report
+
+With the defaults from the front matter:
+
+```bash
+quarto render report.qmd
+```
+
+The title block shows "Oregon". The summary above shows the same value.
+
+With a new value on the command line:
+
+```bash
+quarto render report.qmd -P region:"California"
+```
+
+The title block shows "California". The summary above changes to match,
+because the title block and the R code read the same `params`.
+
+If you delete the chunk at the top of this file and render again with `-P`,
+the title block goes back to "Oregon". Only the summary shows the new value.
+
+## Detail
+
+Body content stands in for the real release.
